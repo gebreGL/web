@@ -1,0 +1,12 @@
+{% extends 'misitio/base.html' %}
+{% block content %}
+{% for concierto in conciertos %}
+    <p>-------------------------------------------------------------------------------------------------------</p>
+<div class="content">
+    <p><div class="nombre">Nombre: {{ concierto.nombre }} </div> Fecha: {{ concierto.fecha }}</p>
+    <p>Lugar: {{ concierto.lugar }}   Precio: {{ concierto.precio }}</p>
+</div>
+{% endfor %}
+    <p>-------------------------------------------------------------------------------------------------------</p>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TicketEA</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="{% static 'css/misitio.css' %}"/>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<div class="page-header">
+    <h1><a href="/">TicketEA</a></h1>
+    <h4 class="subtitulo">· Página para la Compra  de Entradas  de Conciertos ·</h4>
+<!--    <a href="{% url 'concierto_new' %}" class="top-menu"><span class='glyphicon-plus'>Alta Concierto</span></a>-->
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <span class='glyphicon-minus'><a href="/" class="top-menu">INICIO</a>  |</span>
+    <span class='glyphicon-minus'><a href="#" class="top-menu">Sobre Nosotros</a>  |</span>
+
+<!--    <a href="#" class="top-menu"><span class='glyphicon-minus'>Baja Concierto</span></a>-->
+</div>
+  <div class="content">
+      <div class="row">
+        {% block content %}
+        {% endblock %}
+      </div>
+  </div>
+</body>
+</html>
