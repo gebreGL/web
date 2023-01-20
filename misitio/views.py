@@ -1,3 +1,5 @@
+import datetime
+
 from django.shortcuts import render
 
 from .forms import ClienteForm, ConciertoForm
@@ -8,7 +10,7 @@ from django.views.generic import CreateView
 
 
 def conciertos_list(request):
-    conciertos = Concierto.objects.filter(fecha__lte=timezone.now()).order_by('fecha')
+    conciertos = Concierto.objects.order_by('fecha')
     return render(request, 'misitio/conciertos_list.html', {'conciertos': conciertos})
 
 '''def clientes_new(request):
