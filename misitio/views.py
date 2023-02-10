@@ -33,3 +33,6 @@ def conciertos_new(request):
         form = ConciertoForm()
     return render(request, 'misitio/concierto_new.html', {'form': form})
 
+def sobre_nosotros(request):
+    return render(request, 'misitio/sobre_nosotros.html')
+

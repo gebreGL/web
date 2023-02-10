@@ -11,12 +11,12 @@
 </head>
 <body>
 <div class="page-header">
-    <h1><img src=C:\Users\a21gebremedingl\Documents\PruebasPython\PyCharm\web\misitio\templates\images\ticketsIcon.png"><a href="/">TicketEA</a></h1>
+    <h1><img src="{% static 'images/ticket-icon-png-0.ico' %}"><a href="/">TicketEA</a></h1>
     <h4 class="subtitulo">· Página para la Compra  de Entradas  de Conciertos ·</h4>
 <!--    <a href="{% url 'concierto_new' %}" class="top-menu"><span class='glyphicon-plus'>Alta Concierto</span></a>-->
     &nbsp;&nbsp;&nbsp;&nbsp;
     <span class='glyphicon-minus'><a href="/" class="top-menu">INICIO&nbsp;&nbsp;|</a></span>
-    <span class='glyphicon-minus'><a href="#" class="top-menu">Sobre Nosotros&nbsp;&nbsp;|</a></span>
+    <span class='glyphicon-minus'><a href="{% url 'sobre_nosotros' %}" class="top-menu">Sobre Nosotros&nbsp;&nbsp;|</a></span>
     <span class='glyphicon-minus'><a href="{% url 'concierto_new' %}" class="top-menu">Alta Concierto&nbsp;&nbsp;|</a></span>
 
 <!--    <a href="#" class="top-menu"><span class='glyphicon-minus'>Baja Concierto</span></a>-->
