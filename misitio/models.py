@@ -14,4 +14,4 @@ class Concierto(models.Model):
     fecha = models.DateTimeField(blank = False, null = False)
     lugar = models.CharField(max_length=150, blank = False, null = False)
     precio = models.CharField(max_length=14, blank = False, null = False)
-    imagen = models.ImageField(verbose_name='Imagen', upload_to='imgConciertos', null=True)
+    imagen = models.ImageField(verbose_name='Imagen', upload_to='imgConciertos', null=True, blank=True)

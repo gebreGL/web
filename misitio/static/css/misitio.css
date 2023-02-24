@@ -1,5 +1,5 @@
 .page-header{
-    background-color: #000;
+    background-color: #dc0;
     margin-top:5px;
     padding: 10px 10px 10px 10px;
     font-family: 'Abel';
@@ -9,11 +9,11 @@
 }
 
 .page-header a{
-    color: #ffffff;
+    color: #000;
 }
 
 .subtitulo {
-    color: #ffffff;
+    color: #000;
 }
 
 .content{
