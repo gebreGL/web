@@ -12,8 +12,9 @@
     {% endif %}
 </div>
 <br/>
-<button type="button" href="{% url 'delete' concierto.nombre %}"
-        style="font-size: 15px; color: #000; background-color: red;">Borrar</button>
+<a href="{% url 'delete' concierto.nombre %}"
+        style="font-size: 15px; color: #000; background-color: red;
+        border-radius: 10px; padding: 12px; border: 2px solid black; font-weight: bold">Borrar</a>
 <br/>
 <br/>
 {% endfor %}
