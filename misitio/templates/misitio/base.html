@@ -5,28 +5,33 @@
     <title>TicketEA</title>
     {% load static %}
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/ticket-icon-png-0.jpg' %}">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
-    <link rel="stylesheet" href="{% static 'css/misitio.css' %}"/>
+    <!--    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>-->
+    <!--    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>-->
+    <!--    <link rel="stylesheet" href="{% static 'css/misitio.css' %}"/>-->
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet"/>
 </head>
 <body>
-<div class="page-header">
+<div align="center" style="background-color: #dc0; font-family: 'Abel'; font-size: 25px; color: #000000;
+        border-radius: 100px; padding-bottom: 25px; padding-top: 2px">
+    <h1><img src="{% static 'images/ticket-icon-png-0.jpg' %}" width="40" height="30">
+        <a href="/" style="font-size: 50px; color: #000; font-weight: bold;"> TicketEA</a>
+    </h1>
 
-    <h1><img src="{% static 'images/ticket-icon-png-0.jpg' %}" width="50" height="40"><a href="/"> TicketEA</a></h1>
+    <h4 class="subtitulo">· Página para la Compra de Entradas de Conciertos ·</h4>
+    <div style="background-color: #dc0; display: inline-block;">
+        <a href="/" style="background-color: #000; color: #fff; border-radius: 10px;">&nbsp;&nbsp;INICIO&nbsp;&nbsp;</a><a>&nbsp;||&nbsp;</a></span>
+        <a href="{% url 'sobre_nosotros' %}" style="background-color: #000; color: #fff; border-radius: 10px;">&nbsp;&nbsp;Sobre Nosotros&nbsp;<a>&nbsp;||&nbsp;</a></a></span>
+        <a href="{% url 'concierto_new' %}" style="background-color: #000; color: #fff; border-radius: 10px;">&nbsp;&nbsp;Alta Concierto&nbsp;&nbsp;<a>&nbsp;||&nbsp;</a></a></span>
+        <a href="{% url 'delete_conciertos' %}" style="background-color: #000; color: #fff; border-radius: 10px;">&nbsp;&nbsp;Baja Concierto&nbsp;&nbsp;</span></a>
+    </div>
+    <br/>
 
-    <h4 class="subtitulo">· Página para la Compra  de Entradas  de Conciertos ·</h4>
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="/" class="top-menu">INICIO&nbsp;&nbsp;|</a></span>
-    <a href="{% url 'sobre_nosotros' %}" class="top-menu">Sobre Nosotros  |</a></span>
-    <a href="{% url 'concierto_new' %}" class="top-menu">Alta Concierto  |</a></span>
-    <a href="{% url 'delete_conciertos' %}" class="top-menu">Baja Concierto</span></a>
 </div>
-  <div class="content">
-      <div class="row">
+<div class="content">
+    <div class="row">
         {% block content %}
         {% endblock %}
-      </div>
-  </div>
+    </div>
+</div>
 </body>
 </html>

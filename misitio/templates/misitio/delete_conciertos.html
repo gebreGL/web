@@ -1,9 +1,9 @@
 {% extends 'misitio/base.html' %}
 {% block content %}
 {% for concierto in conciertos %}
-    <p>-------------------------------------------------------------------------------------------------------</p>
-<div class="content">
-    <p><div class="nombre">{{ concierto.nombre }} </div> - Fecha: {{ concierto.fecha }}</p>
+    <hr>
+<div style="font-family: 'Abel'; font-size: 15px;">
+    <p><div style="font-size: 20px; color: #b00;">{{ concierto.nombre }} </div><br/> - Fecha: {{ concierto.fecha }}</p>
     <p>- Lugar: {{ concierto.lugar }} <div>- Precio: {{ concierto.precio }}</div></p>
     {% if concierto.imagen %}
     <td scope="row"><img src="{{ concierto.imagen.url }}" style="height: 200px; width: 200px;" alt="..."></td>
@@ -11,7 +11,11 @@
     <td scope="row" ><img src="" style="height: 50px; width: 50px;" alt="no imagen"></td>
     {% endif %}
 </div>
-<a href="{% url 'delete' concierto.nombre %}" class="content">Borrar</a>
+<br/>
+<button type="button" href="{% url 'delete' concierto.nombre %}"
+        style="font-size: 15px; color: #000; background-color: red;">Borrar</button>
+<br/>
+<br/>
 {% endfor %}
 
 {% endblock %}
