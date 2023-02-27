@@ -15,4 +15,4 @@ class ClienteForm(forms.ModelForm):
 class ConciertoForm(forms.ModelForm):
     class Meta:
         model = Concierto
-        fields = [ 'nombre', 'fecha', 'lugar', 'precio', 'imagen']
+        fields = ('nombre', 'fecha', 'lugar', 'precio', 'imagen',)

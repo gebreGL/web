@@ -11,6 +11,7 @@
     <td scope="row" ><img src="" style="height: 50px; width: 50px;" alt="no imagen"></td>
     {% endif %}
 </div>
+<a href="{% url 'delete' concierto.nombre %}" class="content">Borrar</a>
 {% endfor %}
 
 {% endblock %}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>TicketEA</title>
     {% load static %}
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/ticket-icon-png-0.jpg' %}">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
     <link rel="stylesheet" href="{% static 'css/misitio.css' %}"/>
@@ -12,16 +13,14 @@
 <body>
 <div class="page-header">
 
-    <h1><img src="{% static 'images/ticket-icon-png-0.jpg' %}" width="50" height="40"><a href="/">TicketEA</a></h1>
+    <h1><img src="{% static 'images/ticket-icon-png-0.jpg' %}" width="50" height="40"><a href="/"> TicketEA</a></h1>
 
     <h4 class="subtitulo">· Página para la Compra  de Entradas  de Conciertos ·</h4>
-<!--    <a href="{% url 'concierto_new' %}" class="top-menu"><span class='glyphicon-plus'>Alta Concierto</span></a>-->
     &nbsp;&nbsp;&nbsp;&nbsp;
-    <span class='glyphicon-minus'><a href="/" class="top-menu">INICIO&nbsp;&nbsp;|</a></span>
-    <span class='glyphicon-minus'><a href="{% url 'sobre_nosotros' %}" class="top-menu">Sobre Nosotros&nbsp;&nbsp;|</a></span>
-    <span class='glyphicon-minus'><a href="{% url 'concierto_new' %}" class="top-menu">Alta Concierto&nbsp;&nbsp;|</a></span>
-
-<!--    <a href="#" class="top-menu"><span class='glyphicon-minus'>Baja Concierto</span></a>-->
+    <a href="/" class="top-menu">INICIO&nbsp;&nbsp;|</a></span>
+    <a href="{% url 'sobre_nosotros' %}" class="top-menu">Sobre Nosotros  |</a></span>
+    <a href="{% url 'concierto_new' %}" class="top-menu">Alta Concierto  |</a></span>
+    <a href="{% url 'delete_conciertos' %}" class="top-menu">Baja Concierto</span></a>
 </div>
   <div class="content">
       <div class="row">

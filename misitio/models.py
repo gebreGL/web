@@ -1,3 +1,4 @@
+from django.core.validators import FileExtensionValidator
 from django.db import models
 
 # Create your models here.
@@ -11,7 +12,7 @@ class Cliente(models.Model):
 
 class Concierto(models.Model):
     nombre = models.CharField(max_length=20, primary_key = True)
-    fecha = models.DateTimeField(blank = False, null = False)
+    fecha = models.DateField(blank = False, null = False)
     lugar = models.CharField(max_length=150, blank = False, null = False)
     precio = models.CharField(max_length=14, blank = False, null = False)
-    imagen = models.ImageField(verbose_name='Imagen', upload_to='imgConciertos', null=True, blank=True)
+    imagen = models.ImageField(upload_to='uploads/', null=True, validators=[FileExtensionValidator(allowed_extensions=['jpg', 'png'])])
