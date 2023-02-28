@@ -1,20 +1,32 @@
 {% extends 'misitio/base.html' %}
 {% block content %}
+<h3 style="font-size: 30px; font-family: 'Abel'; margin-left: 20px;">CONCIERTOS A BORRAR :</h3>
 {% for concierto in conciertos %}
     <hr>
-<div style="font-family: 'Abel'; font-size: 15px;">
-    <p><div style="font-size: 20px; color: #b00;">{{ concierto.nombre }} </div><br/> - Fecha: {{ concierto.fecha }}</p>
-    <p>- Lugar: {{ concierto.lugar }} <div>- Precio: {{ concierto.precio }}</div></p>
-    {% if concierto.imagen %}
-    <td scope="row"><img src="{{ concierto.imagen.url }}" style="height: 200px; width: 200px;" alt="..."></td>
-    {% else %}
-    <td scope="row" ><img src="" style="height: 50px; width: 50px;" alt="no imagen"></td>
-    {% endif %}
+<div style="font-family: 'Abel'; font-size: 20px;">
+    <p><div style="font-size: 30px; color: #b00; margin-left: 20px; font-weight: bold;">{{ concierto.nombre }}</div></p>
+    <div style="display: flex;">
+        {% if concierto.imagen %}
+        <td scope="row"><img src="{{ concierto.imagen.url }}" style="height: 230px; width: 250px; margin-left: 20px;
+                       border-radius: 10px;" alt="..."></td>
+        {% else %}
+        <td scope="row" ><img src="" style="height: 50px; width: 50px;" alt="no imagen"></td>
+        {% endif %}
+    <div style="display: inline-block; margin-left: 30px; font-size: 25px;">
+        <p> - Fecha: <a style="font-weight: bold; font-size: 20px;">&nbsp;&nbsp;{{ concierto.fecha }}</a></p>
+        <p>- Lugar:  <a style="font-weight: bold; font-size: 20px;">&nbsp;&nbsp;{{ concierto.lugar }}</a></p>
+        <p>- Precio:  <a style="font-weight: bold; font-size: 20px;">&nbsp;&nbsp;{{ concierto.precio }}</a></p>
+        <a href="{% url 'delete' concierto.nombre %}"
+        style="font-size: 15px; color: #000; background-color: red;
+        border-radius: 10px; padding: 15px; border: 2px solid black; font-weight: bold;
+        margin-left: 30px;">Borrar</a>
+    </div>
+    </div>
+
+
 </div>
 <br/>
-<a href="{% url 'delete' concierto.nombre %}"
-        style="font-size: 15px; color: #000; background-color: red;
-        border-radius: 10px; padding: 12px; border: 2px solid black; font-weight: bold">Borrar</a>
+
 <br/>
 <br/>
 {% endfor %}

@@ -1,6 +1,5 @@
 from django.urls import path
 from . import views
-from .views import conciertos_new
 
 urlpatterns = [
     path('', views.conciertos_list, name='conciertos_list'),

@@ -1,18 +1,19 @@
 from django import forms
-from .models import Cliente, Concierto
+from .models import Concierto
 
 
-class ClienteForm(forms.ModelForm):
-    class Meta:
-        model = Cliente
-        fields = [ 'dni', 'nombre', 'fechaAlta', 'direccion', 'movil']
+# class ClienteForm(forms.ModelForm):
+#     class Meta:
+#         model = Cliente
+#         fields = [ 'dni', 'nombre', 'fechaAlta', 'direccion', 'movil']
 
-        # también se podría hacer  --> ya que queremos todos los campos
-        # class Meta:
-        #   model = Canciones
-        #   fields = '__all__'
 
 class ConciertoForm(forms.ModelForm):
     class Meta:
         model = Concierto
         fields = ('nombre', 'fecha', 'lugar', 'precio', 'imagen',)
+
+        # también se podría hacer  --> ya que queremos todos los campos
+        # class Meta:
+        #   model = Canciones
+        #   fields = '__all__'

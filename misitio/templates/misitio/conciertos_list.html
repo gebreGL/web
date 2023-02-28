@@ -1,9 +1,10 @@
 {% extends 'misitio/base.html' %}
 {% block content %}
+<h3 style="font-size: 30px; font-family: 'Abel'; margin-left: 20px;">CONCIERTOS DISPOIBLES :</h3>
 {% for concierto in conciertos %}
     <hr/>
 <div style="font-family: 'Abel'; font-size: 20px;">
-    <p><div style="font-size: 30px; color: #b00; margin-left: 10px; font-weight: bold;">{{ concierto.nombre }}</div></p>
+    <p><div style="font-size: 25px; color: #b00; margin-left: 20px; font-weight: bold;">{{ concierto.nombre }}</div></p>
     <div style="display: flex;">
         {% if concierto.imagen %}
         <td scope="row"><img src="{{ concierto.imagen.url }}" style="height: 230px; width: 250px; margin-left: 20px;

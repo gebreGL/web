@@ -1,10 +1,9 @@
-import datetime
 import os
 
 from django.shortcuts import render, redirect, get_object_or_404
 
-from .forms import ClienteForm, ConciertoForm
-from .models import Cliente, Concierto
+from .forms import ConciertoForm
+from .models import Concierto
 # Create your views here.
 
 
@@ -15,16 +14,6 @@ def conciertos_list(request):
 def conciertos_list_borrar(request):
     conciertos = Concierto.objects.order_by('fecha')
     return render(request, 'misitio/delete_conciertos.html', {'conciertos': conciertos})
-
-'''def clientes_new(request):
-    if request.method == 'POST':
-        form = ClienteForm(request.POST)
-        if form.is_valid():
-            cliente = form.save()
-            cliente.save()
-    else:
-        form = ClienteForm()
-    return render(request, 'misitio/concierto_new.html', {'form': form})'''
 
 def conciertos_new(request):
     if request.method == 'POST':
@@ -38,7 +27,7 @@ def conciertos_new(request):
     return render(request, 'misitio/concierto_new.html', {'form': form})
 
 def sobre_nosotros(request):
-    return render(request, 'misitio/conciertos_list.html')
+    return render(request, 'misitio/sobre_nosotros.html')
 
 def delete_concierto(request, pk):
     concierto = get_object_or_404(Concierto, nombre=pk)
