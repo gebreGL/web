@@ -5,32 +5,43 @@
     <title>TicketEA</title>
     {% load static %}
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/ticket-icon-png-0.jpg' %}">
-    <!--    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>-->
-    <!--    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>-->
     <!--    <link rel="stylesheet" href="{% static 'css/misitio.css' %}"/>-->
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
-<body>
-<div style="background-color: black; height: 5px; margin-bottom: 2px;"></div>
-<div align="center" style="background-color: #dc0; font-family: 'Abel'; font-size: 25px; color: #000000; border: solid 2px;
-        border-radius: 100px; padding-bottom: 50px; padding-top: 2px; height: 200px; width: 900px; margin-left: 300px;">
-    <h1><img src="{% static 'images/ticket-icon-png-0.jpg' %}" width="40" height="30"/>
-        <a href="/" style="font-size: 50px; color: #000; font-weight: bold;"> TicketEA</a>
-    </h1>
+<body style="background-color: #e0e0e0">
+<div style="background-color: black; height: 140px">
+    <div align="center" style="background-color: #FFC000; font-family: 'Abel'; font-size: 20px; color: #000000; border: solid 2px;
+        border-radius: 100px; padding-bottom: 50px; height: 55px; width: 500px; margin-left: 32%;">
+        <h1><img src="{% static 'images/ticket-icon-png-0.jpg' %}" width="40" height="30"/>
+            <a href="/" style="font-size: 50px; font-weight: bold; color: black; font-family: 'Lobster'"
+               onmouseover="this.style.color='white'" onmouseout="this.style.color='black'"> TicketEA</a>
+        </h1>
+    </div>
+    <div>
+        <div align="center" style="border: solid 2px; font-family: 'Lobster'; font-size: 15px;
+    color: #FFC000; height: 20px; margin-left: 31%; display: inline-block; margin-top: 3px;
+            padding-left: 50px; padding-right: 50px; border-radius: 10px">
+            <a href="/" style="background-color: #FFC000; color: #000; border-radius: 10px; text-decoration: none;"
+               onmouseover="this.style.color='white'"
+               onmouseout="this.style.color='#000'">&nbsp;&nbsp;Inicio&nbsp;&nbsp;</a><a>&nbsp;||&nbsp;</a>
+            <a href="{% url 'concierto_new' %}" style="background-color: #FFC000; color: #000; border-radius: 10px; text-decoration: none;"
+               onmouseover="this.style.color='white'"
+               onmouseout="this.style.color='#000'">&nbsp;&nbsp;Alta Concierto&nbsp;&nbsp;<a>&nbsp;||&nbsp;</a></a>
+            <a href="{% url 'delete_conciertos' %}" style="background-color: #FFC000; color: #000; border-radius: 10px; text-decoration: none;"
+               onmouseover="this.style.color='white'"
+               onmouseout="this.style.color='#000'">&nbsp;&nbsp;Baja Concierto&nbsp;&nbsp;</a><a>&nbsp;||&nbsp;</a></a>
+            <a href="{% url 'sobre_nosotros' %}" style=" background-color: #FFC000; color: #000; text-decoration: none;
+            border-radius: 10px;" onmouseover="this.style.color='white' "
+               onmouseout="this.style.color='#000'">&nbsp;&nbsp;Sobre Nosotros&nbsp;</a>
 
-    <h4 class="subtitulo">· Página para la Compra de Entradas de Conciertos ·</h4>
-    <div style="background-color: #dc0; display: inline-block;">
-        <a href="/" style="background-color: #000; color: #fff; border-radius: 10px;">&nbsp;&nbsp;INICIO&nbsp;&nbsp;</a><a>&nbsp;||&nbsp;</a></span>
-        <a href="{% url 'sobre_nosotros' %}" style="background-color: #000; color: #fff; border-radius: 10px;">&nbsp;&nbsp;Sobre Nosotros&nbsp;<a>&nbsp;||&nbsp;</a></a></span>
-        <a href="{% url 'concierto_new' %}" style="background-color: #000; color: #fff; border-radius: 10px;">&nbsp;&nbsp;Alta Concierto&nbsp;&nbsp;<a>&nbsp;||&nbsp;</a></a></span>
-        <a href="{% url 'delete_conciertos' %}" style="background-color: #000; color: #fff; border-radius: 10px;">&nbsp;&nbsp;Baja Concierto&nbsp;&nbsp;</span></a>
+        </div>
     </div>
     <br/>
 
 </div>
 <div class="content">
     <div class="row">
-        <div style="background-color: black; height: 5px; margin-top: 2px;"></div>
         {% block content %}
         {% endblock %}
     </div>

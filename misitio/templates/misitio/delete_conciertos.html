@@ -1,6 +1,6 @@
 {% extends 'misitio/base.html' %}
 {% block content %}
-<h3 style="font-size: 30px; font-family: 'Abel'; margin-left: 20px;">CONCIERTOS A BORRAR :</h3>
+<h3 style="font-size: 30px; font-family: 'Abel'; margin-left: 20px;">CONCIERTOS PARA BORRAR :</h3>
 {% for concierto in conciertos %}
     <hr>
 <div style="font-family: 'Abel'; font-size: 20px;">
@@ -18,8 +18,9 @@
         <p>- Precio:  <a style="font-weight: bold; font-size: 20px;">&nbsp;&nbsp;{{ concierto.precio }}</a></p>
         <a href="{% url 'delete' concierto.nombre %}"
         style="font-size: 15px; color: #000; background-color: red;
-        border-radius: 10px; padding: 15px; border: 2px solid black; font-weight: bold;
-        margin-left: 30px;">Borrar</a>
+        border-radius: 10px; padding: 15px; border: 2px solid black; font-weight: bold; text-decoration: none;
+        margin-left: 30px;" onmouseover="this.style.color='#fff'"
+                onmouseout="this.style.color='#000'">Borrar</a>
     </div>
     </div>
 
