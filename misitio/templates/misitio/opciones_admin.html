@@ -1,18 +1,19 @@
 {% extends 'misitio/base.html' %}
 {% block content %}
 
-<div style="margin-left: 30px;">
-    <h3 style="font-size: 30px; font-family: 'Abel'; margin-left: 20px;">¡ BIENVENIDO ADMIN !</h3>
+<div style="margin-left: 30px; font-family: 'Abel';">
+    <h3 style="font-size: 30px; margin-left: 20px;">¡ BIENVENIDO ADMIN !</h3>
     <hr/>
+    <p style="font-size: 20px;">Ahora puedes llevar a cabo las siguientes acciones :</p>
     <a href="{% url 'concierto_new' %}"
        style="background-color: #FFC000; color: #000; border-radius: 10px; text-decoration: none;"
        onmouseover="this.style.color='white'"
-       onmouseout="this.style.color='#000'">&nbsp;&nbsp;Alta Concierto&nbsp;&nbsp;<a>&nbsp;&nbsp;</a></a>
+       onmouseout="this.style.color='#000'">&nbsp;&nbsp;Crear un Concierto&nbsp;&nbsp;<a>&nbsp;&nbsp;</a></a>
 
     <a href="{% url 'delete_conciertos' %}"
        style="background-color: #FFC000; color: #000; border-radius: 10px; text-decoration: none;"
        onmouseover="this.style.color='white'"
-       onmouseout="this.style.color='#000'">&nbsp;&nbsp;Baja Concierto&nbsp;&nbsp;</a><a>&nbsp&nbsp;</a></a>
+       onmouseout="this.style.color='#000'">&nbsp;&nbsp;Eliminar un Concierto&nbsp;&nbsp;</a><a>&nbsp&nbsp;</a></a>
 
 </div>
 {% endblock %}
