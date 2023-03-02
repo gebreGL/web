@@ -1,0 +1,24 @@
+{% extends 'registration/base.html' %}
+{% block content %}
+
+<div style="margin-left: 30px; margin-right: 30px;">
+    <h3 style="font-size: 30px; font-family: 'Abel'; margin-left: 20px; ">INICIO DE SESION :</h3><hr/>
+    <form method="post" style="margin-left: 50px;">
+        {% csrf_token %}
+        <div style="font-size: 20px; font-family: 'Abel'; margin-left: 20px;">
+          <label for="usuario">
+            <p>Usuario</p>
+            <input type="text" name="username">
+        </label>
+        <label for="pass">
+            <p>Contraseña</p>
+            <input type="password" name="password">
+        </label><br/><br/>
+        <button type="submit" style="padding: 6px;">Iniciar sesión</button>
+        </div>
+
+    </form>
+</div>
+
+
+{% endblock %}
